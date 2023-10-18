@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import Navigation from './Navigation/Navigation'
+import Home from "../src/Home/Home"
 
 import './App.css'
 
@@ -7,8 +7,7 @@ function App() {
 
   return (
     <div>
-      <Navigation/>
-      <h1>hello</h1>
+      <Home/>
     </div>
   )
 }

@@ -1,0 +1,20 @@
+
+
+
+
+.foodItems{
+    width: 60%;
+    margin: auto;
+    border: 1px solid rgb(210, 210, 210);
+    border-radius: 5px;
+    margin-top: 5%;
+}
+.items{
+    margin:0 4%;
+    padding: 3% 0;
+    border-bottom: 1px solid  rgb(210, 210, 210);
+}
+.items h4{
+    margin: 0;
+    margin-bottom: 1%;
+}
