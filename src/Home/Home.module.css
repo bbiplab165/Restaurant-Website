@@ -1,20 +1,61 @@
 
-
+.main{
+    background-color: gray;
+    min-height: 100vh;
+}
 
 
 .foodItems{
     width: 60%;
     margin: auto;
-    border: 1px solid rgb(210, 210, 210);
-    border-radius: 5px;
-    margin-top: 5%;
+    border:none;
+    border-radius: 15px;
+    margin-top: 3%;
+    background-color: white;  
+    margin-bottom: 3%;  
+}
+.map{
+    display: flex;
+    margin: 0 3%;
+    border-bottom: 1px solid  rgb(210, 210, 210);
+    justify-content: space-between;
 }
 .items{
-    margin:0 4%;
+    margin:0 2%;
     padding: 3% 0;
-    border-bottom: 1px solid  rgb(210, 210, 210);
+    
 }
 .items h4{
     margin: 0;
     margin-bottom: 1%;
+}
+
+.amount{
+    margin-right: 4%;
+    width: 15%;
+}
+.count{
+    display: flex;
+    height: fit-content;
+    margin-top: 15%;
+}
+.count label{
+    height: fit-content;
+    margin: auto;
+    font-size: 1.1rem;
+}
+.count h3{
+    height: fit-content;
+    margin: 8%;
+    width: 20%;
+    text-align: center;
+    border: 1px solid rgb(166, 166, 166);
+}
+.amount button{
+    margin-left: 30%;
+    border-radius: 15px;
+    padding: 5% 15%;
+    background-color: #761E0B;
+    color:white;
+    font-weight: 700;
 }

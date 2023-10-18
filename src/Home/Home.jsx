@@ -1,39 +1,54 @@
+import { useState } from 'react';
 import Navigation from '../Navigation/Navigation'
 import Style from "./Home.module.css"
 
-function Home(){
+function Home() {
+    const [count, setCount] = useState(1)
     const foodItems = [
         {
-          name: "Pizza",
-          description: "Delicious pepperoni pizza with mozzarella cheese.",
-          price: 12.99,
+            name: "Pizza",
+            description: "Delicious pepperoni pizza with mozzarella cheese.",
+            price: 12.99,
         },
         {
-          name: "Burger",
-          description: "Classic beef burger with lettuce, tomatoes, and cheese.",
-          price: 8.49,
+            name: "Burger",
+            description: "Classic beef burger with lettuce, tomatoes, and cheese.",
+            price: 8.49,
         },
         {
-          name: "Spaghetti Carbonara",
-          description: "Creamy pasta with bacon and Parmesan cheese.",
-          price: 10.99,
+            name: "Spaghetti Carbonara",
+            description: "Creamy pasta with bacon and Parmesan cheese.",
+            price: 10.99,
         },
         {
-          name: "Salad",
-          description: "Fresh garden salad with mixed greens and balsamic dressing.",
-          price: 6.99,
+            name: "Salad",
+            description: "Fresh garden salad with mixed greens and balsamic dressing.",
+            price: 6.99,
         }
-      ];
-      
-    return(
-        <div>
-            <Navigation/>
+    ];
+
+    function handleCount(){
+        setCount(count+1)
+    }
+
+    return (
+        <div className={Style.main}>
+            <Navigation />
             <div className={Style.foodItems}>
-                {foodItems.map((i)=>(
-                    <div className={Style.items}>
-                        <h4>{i.name}</h4>
-                        <h4>{i.description}</h4>
-                        <h4>$ {i.price}</h4>
+                {foodItems.map((i, index) => (
+                    <div key={index} className={Style.map}>
+                        <div className={Style.items}>
+                            <h4>{i.name}</h4>
+                            <h4>{i.description}</h4>
+                            <h4>$ {i.price}</h4>
+                        </div>
+                        <div className={Style.amount}>
+                            <div className={Style.count}>
+                                <label>Amount</label>
+                                <h3>{count}</h3>
+                            </div>
+                            <button onClick={handleCount}>+ Add</button>
+                        </div>
                     </div>
                 ))}
             </div>
