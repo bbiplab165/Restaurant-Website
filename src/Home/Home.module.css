@@ -59,3 +59,28 @@
     color:white;
     font-weight: 700;
 }
+.desc{
+    margin-bottom: 10%;
+}
+.desc p{
+    font-size: 1.1rem;
+}
+.desc p span{
+    position: absolute;
+    right: 7%;
+}
+
+.modalButtons{
+    position: absolute;
+    right: 7%;
+    bottom: 10%;
+    display: flex;
+    width: 40%;
+    justify-content: space-between;
+}
+.modalButtons button{
+    padding: 3% 9%;
+    font-size: 1.1rem;
+    border-radius: 15px;
+    border: 1px solid #761E0B;
+}
