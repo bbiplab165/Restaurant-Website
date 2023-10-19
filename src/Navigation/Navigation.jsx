@@ -51,6 +51,20 @@ function Navigation() {
         setSelectedFood(cart)
     }, [cart]);
 
+    function handleDecrement(id) {
+        const updatedSelectedFood = [...selectedFood]; // Create a copy of the selectedFood array
+        if (updatedSelectedFood[id].amount > 0) {
+            updatedSelectedFood[id].amount--; // Decrement the amount
+            setSelectedFood(updatedSelectedFood); // Update the state
+        }
+        totalCost(selectedFood)
+    }
+    function handleIncrement(id) {
+        const updatedSelectedFood = [...selectedFood]; // Create a copy of the selectedFood array
+        updatedSelectedFood[id].amount++; // Increment the amount
+        setSelectedFood(updatedSelectedFood);
+        totalCost(selectedFood)
+    }
 
     return (
         <div className={Style.main}>
@@ -66,8 +80,16 @@ function Navigation() {
                 <Box sx={style}>
                     <div className={Style.desc}>
                         {selectedFood && selectedFood.map((i) => (
-                            <div key={i.id}>
-                                <h3>{i.name}</h3>
+                            <div key={i.id} className={Style.item}>
+                                <div className={Style.right}>
+                                    <h3>{i.name}</h3>
+                                    <p>{i.amount}</p>
+                                    <h4>$ {i.price}</h4>
+                                </div>
+                                <div className={Style.button}>
+                                    <button onClick={() => handleDecrement(i.id)}>-</button>
+                                    <button onClick={() => handleIncrement(i.id)}>+</button>
+                                </div>
                             </div>
                         ))}
                         <p>Total Amount <span>$ {total}</span></p>
