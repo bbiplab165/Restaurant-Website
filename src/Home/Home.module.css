@@ -23,7 +23,7 @@
 .items{
     margin:0 2%;
     padding: 3% 0;
-    
+    width: 70%;
 }
 .items h4{
     margin: 0;
@@ -44,43 +44,19 @@
     margin: auto;
     font-size: 1.1rem;
 }
-.count h3{
+.count input{
     height: fit-content;
     margin: 8%;
-    width: 20%;
+    width: 60%;
     text-align: center;
     border: 1px solid rgb(166, 166, 166);
 }
 .amount button{
-    margin-left: 30%;
+    margin-left: 25%;
     border-radius: 15px;
     padding: 5% 15%;
     background-color: #761E0B;
     color:white;
     font-weight: 700;
-}
-.desc{
-    margin-bottom: 10%;
-}
-.desc p{
-    font-size: 1.1rem;
-}
-.desc p span{
-    position: absolute;
-    right: 7%;
-}
-
-.modalButtons{
-    position: absolute;
-    right: 7%;
-    bottom: 10%;
-    display: flex;
-    width: 40%;
-    justify-content: space-between;
-}
-.modalButtons button{
-    padding: 3% 9%;
-    font-size: 1.1rem;
-    border-radius: 15px;
-    border: 1px solid #761E0B;
+    margin-top: 8%;
 }

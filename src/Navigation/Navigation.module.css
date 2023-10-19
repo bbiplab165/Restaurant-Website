@@ -1,9 +1,10 @@
-.main{
+.main {
     background-color: #761E0B;
     display: flex;
     justify-content: space-between;
 }
-.main h2{
+
+.main h2 {
     /* margin-left: 3%; */
     padding: 0;
     font-size: 2.1rem;
@@ -11,9 +12,10 @@
     height: fit-content;
     color: white;
 }
-.main button{
+
+.main button {
     margin: 0;
-    padding:0.7% 1%;
+    padding: 0.7% 1%;
     margin-right: 6%;
     height: fit-content;
     margin-top: 0.8%;
@@ -26,18 +28,55 @@
     color: white;
     border: none;
 }
-.main button img{
+
+.main button img {
     width: 12%;
     margin-right: 3%;
-    display: inline-block; 
+    display: inline-block;
     margin-left: 9%;
 }
-.main button span{
-    display: inline-block; 
+
+.main button span {
+    display: inline-block;
     background-color: #A43319;
     width: 20%;
     margin-left: 10%;
     border-radius: 30px;
     padding: 1%;
     align-items: center;
+}
+
+
+.desc {
+    margin-top: 0;
+}
+
+.desc h3 {
+    margin-bottom: 0;
+}
+
+.desc p {
+    font-size: 1.1rem;
+    margin-bottom: 12%;
+}
+
+.desc p span {
+    position: absolute;
+    right: 7%;
+}
+
+.modalButtons {
+    position: absolute;
+    right: 7%;
+    bottom: 10%;
+    display: flex;
+    width: 40%;
+    justify-content: space-between;
+}
+
+.modalButtons button {
+    padding: 3% 9%;
+    font-size: 1.1rem;
+    border-radius: 15px;
+    border: 1px solid #761E0B;
 }
